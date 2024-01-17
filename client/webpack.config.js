@@ -22,10 +22,6 @@ module.exports = () => {
         template: "./index.html",
         title: "Webpack Plugin",
       }),
-      // new InjectManifest({
-      //   swSrc: "./src-sw.js",
-      //   swDest: "service-worker.js",
-      // }),
       new GenerateSW({
         clientsClaim: true,
         skipWaiting: true,
@@ -47,21 +43,6 @@ module.exports = () => {
           },
         ],
       }),
-      // new WorkboxPlugin.GenerateSW({
-      //   exclude: [/\.(?:png|jpg|jpeg|svg)$/],
-
-      //   runtimeCaching: [
-      //     {
-      //       urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-
-      //       handler: "cacheFirst",
-
-      //       options: {
-      //         cacheName: "images",
-      //       },
-      //     },
-      //   ],
-      // }),
     ],
 
     module: {
